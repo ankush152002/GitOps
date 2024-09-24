@@ -1,12 +1,16 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: gke-pv
+  name: filestore-pv
+  labels:
+    app: system-monitoring-app
 spec:
   capacity:
-    storage: 10Gi
+    storage: 1Ti  # Match the size with your Filestore instance
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany  # Filestore supports RWX
+  nfs:
+    path: /pv  # This should match the File Share Name in Filestore
+    server: 10.151.50.162  # Replace with the IP address of the Filestore instance
   persistentVolumeReclaimPolicy: Retain
-  gcePersistentDisk:
-    fsType: ext4
+
