@@ -1,0 +1,8 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: filestore-hdd-basic
+provisioner: filestore.cnrm.cloud.google.com
+parameters:
+  tier: HDD
+  region: us-central1-c  # Replace with your region
