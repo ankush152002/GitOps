@@ -31,8 +31,8 @@ spec:
               key: DB_PASSPORT       
         volumeMounts:
         - name: storage-volume
-          mountPath: /data  
+          mountPath: /newdata
       volumes:
       - name: storage-volume
         persistentVolumeClaim:
-          claimName: gke-pvc
+          claimName: gke-pvclaim
