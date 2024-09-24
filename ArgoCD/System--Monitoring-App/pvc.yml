@@ -2,12 +2,10 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: gke-pvclaim
-  namespace: new8
 spec:
   accessModes:
-    - ReadWriteOnce  # or ReadWriteMany, depending on your use case
+    - ReadWriteOnce
   resources:
     requests:
       storage: 10Gi
-  storageClassName: standard  # or a storage class that supports RWX
 
