@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: gke-filestore-pvc
-  namespace: new7
+  namespace: new9
 spec:
   accessModes:
     - ReadWriteMany
