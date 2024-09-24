@@ -30,9 +30,9 @@ spec:
               name: db-secret        
               key: DB_PASSPORT       
         volumeMounts:
-        - name: storage-volume
-          mountPath: /newdata
+        - name: filestore-volume
+          mountPath: /newdataa
       volumes:
-      - name: storage-volume
+      - name: filestore-volume
         persistentVolumeClaim:
-          claimName: gke-pvclaim
+          claimName: gke-filestore-pvc
