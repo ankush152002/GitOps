@@ -1,11 +1,15 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: gke-pvclaim
+  name: gke-filestore-pvc
+  namespace: new7
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 1Ti  # Match the size with the PV
+  selector:
+    matchLabels:
+      app: system-monitoring-app
 
