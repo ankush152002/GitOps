@@ -9,5 +9,5 @@ spec:
   resources:
     requests:
       storage: 1Ti  # Match the size with the PV
-  storageClassName: filestore-hdd-basic
+  storageClassName: ""
 
