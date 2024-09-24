@@ -9,7 +9,5 @@ spec:
   resources:
     requests:
       storage: 1Ti  # Match the size with the PV
-  selector:
-    matchLabels:
-      app: system-monitoring-app
+  storageClassName: filestore-hdd-basic
 
