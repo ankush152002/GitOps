@@ -9,5 +9,4 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   gcePersistentDisk:
-    pdName: pvc
     fsType: ext4
